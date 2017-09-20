@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Employee Details </title>  <!-- Title of the page -->
+<script type="text/javascript">
+
+// Define a function which will work as a method
+
+    function changesalary(Employee){
+    this.emp_salary = Employee;
+    }
+
+    function printdetails(Name, Skills, salary){
+    this.Name = Name;
+    this.Skills = Skills;
+    this.salary = salary;
+    this.changesalary = changesalary;    // Assign that method as property.
+    }
+
+</script>
+</head>
+<body>
+    <script type="text/javascript">
+        var Emp = new printdetails("Rodrick", "Hadoop , Java", 300000);
+        Emp.changesalary(5000000);                      // this is the updated salary of an employee 
+        document.write("Employee Name is : " + Emp.Name + "<br>");      // for output on the screen
+        document.write("Employee Skills are : " + Emp.Skills + "<br>");
+        document.write("Employee salary is : " + Emp.salary + "<br>");
+        document.write("Employee Updated salary is : " + Emp.emp_salary + "<br>");
+    </script>
+</body>  
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<!DOCTYPE html>
+<html>
+<body>
+
+
+
+
+<script>
+
+function employee(firstName, lastName, department, age, designation){
+  this.firstName=firstName;
+  this.lastName=lastName;
+  this.department=department;
+  this.age=age;
+  this.designation=designation;
+ //methods
+  this.getFullName(){
+    console.log(this.firstName+" "+this.lastName);
+  }
+  this.printAge(){
+   console.log(this.age);
+  }
+};
+
+var employee_1=new employee("Nitin","Varshney","IT",30,"Senior Software developer"); 
+console.log(employee_1.getFullName) //output will be "Nitin Varshney"
+var employee_2=new employee("Sumit","Varshney","IT",35,"Manager");
+console.log(employee_2.getAge()); //output will be 35
+
+
+    /*
+function Person(first, last, age, eye) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eye;
+    this.name = function() {
+        return this.firstName + " " + this.lastName
+    };
+}
+
+var myFather = new Person("John", "Doe", 50, "blue");
+document.getElementById("demo").innerHTML =
+"My father is " + myFather.name(); */
+
+</script>
+
+</body>
+</html>
+-->
